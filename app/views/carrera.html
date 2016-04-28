@@ -1,29 +1,23 @@
 <div class="container">
   <h2>Carreras</h2>
-  <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+  <p>Se pueden ver todas las carreras y crearlas</p>
+  <div class="form-group">
+    <input type="text" ng-model="vm.carrera.name">
+    <button class="btn btn-primary" ng-click="vm.crearCarrera()">Crear Carrera</button>
+  </div>
   <table class="table">
     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+        <th>ID</th>
+        <th>Nombre carrera</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><a ng-href="#">John</a></td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
+      <tr ng-repeat="carrera in vm.carreras">
+        <td>{{carrera.id}}</td>
+        <td>{{carrera.name}}</td>
+        <td><a class="btn btn-primary" ng-href="#/Materia/{{carrera.id}}" ng-click="vm.toRoot(carrera.name)">Ver Carrera</a></td>
       </tr>
     </tbody>
   </table>

@@ -1,29 +1,21 @@
 <div class="container">
-  <h2>Materias</h2>
-  <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+  <h2>{{vm.title}}</h2>
+  <p>Se pueden asignar materias a la carrera</p>
+  <div class="form-group">
+    <input type="text" ng-model="vm.materia.name">
+    <button class="btn btn-primary" ng-click="vm.crearMateria()">Crear Materia</button>
+  </div>
   <table class="table">
     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+        <th>ID</th>
+        <th>Nombre Materia</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><a ng-href="#">John</a></td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
+      <tr ng-repeat="materia in vm.clases">
+        <td>{{materia.id}}</td>
+        <td>{{materia.name}}</td>
       </tr>
     </tbody>
   </table>

@@ -15,27 +15,28 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ngLodash'
   ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/carrera.html',
+        controller: 'CarreraCtrl as vm'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
-      .when('/Materia', {
+      .when('/Materia/:id', {
         templateUrl: 'views/materia.html',
-        controller: 'MateriaCtrl'
+        controller: 'MateriaCtrl as vm'
       })
       .when('/Carrera', {
         templateUrl: 'views/carrera.html',
-        controller: 'CarreraCtrl'
+        controller: 'CarreraCtrl as vm'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/Carrera'
       });
   });
