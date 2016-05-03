@@ -1,0 +1,124 @@
+<div ng-controller="TemariosCtrl" class="container">
+
+
+
+  <script type="text/ng-template" id="group-template.html">
+    <div class="panel {{panelClass || 'panel-default'}}">
+      <div class="panel-heading">
+        <h4 class="panel-title" style="color:#fa39c3">
+          <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading"><span
+            ng-class="{'text-muted': isDisabled}">{{heading}}</span></a>
+        </h4>
+      </div>
+      <div class="panel-collapse collapse" uib-collapse="!isOpen">
+        <div class="panel-body" style="text-align: right" ng-transclude></div>
+      </div>
+    </div>
+  </script>
+  <!--Encabezado-->
+  <h3 class="titles">Agregar Materias</h3>
+  
+  <!--Buscador de materia-->
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Materia a buscar">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+        </span>
+      </div>
+    </div>
+
+  </div>
+  <!--Nombre materia y opciones de esta-->
+  <div>
+    <br>
+    <uib-accordion close-others="oneAtATime">
+      <uib-accordion-group is-open="status.open">
+        <uib-accordion-heading>
+        Nombre materia
+          <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+
+      </uib-accordion-heading>
+      This is just some content to illustrate fancy headings.
+      </uib-accordion-group>
+    </uib-accordion>
+  </div>
+  
+  <!--Temas-->
+  <!--Titulo temas -->
+  <label >Temas:</label>
+
+  <!--Listado de temas-->
+  <uib-accordion close-others="oneAtATime">
+      <uib-accordion-group is-open="status.open">
+        <uib-accordion-heading>
+        Tema 1
+          <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+        </uib-accordion-heading>
+        Va toda la información del tema (Titulo, horas, objetivo, etc)  
+      </uib-accordion-group>
+
+    <!--subtemas-->
+      <uib-accordion-group  class="subtemaUI">
+        <uib-accordion-heading>
+        Subtema 1
+          <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+        </uib-accordion-heading>
+          Va toda la información del subtema (Titulo, horas, objetivo, etc)  
+      </uib-accordion-group>
+
+    <!--Agregar subtemas-->
+   <div class="row">
+        <div class="col-xs-12">
+            <button type="button" class="btn btn-block btn-subtheme btn-lg" onclick="location.href='@Url.Action("Create")';return false;">Agregar Subtema</button>
+        </div>
+    </div>
+  </uib-accordion>
+
+  <!--Agregar Tema-->
+  <uib-accordion>
+    <uib-accordion-group>
+      <uib-accordion-heading>
+       Agregar tema
+      </uib-accordion-heading>
+    </uib-accordion-group>
+  </uib-accordion>
+
+  <!--Pruebas accordion-->
+  <uib-accordion close-others="oneAtATime">
+    <uib-accordion-group heading="Dynamic Body Content">
+      <p>The body of the uib-accordion group grows to fit the contents</p>
+      <button type="button" class="btn btn-default btn-sm" ng-click="addItem()">Add Item</button>
+      <div ng-repeat="item in items">{{item}}</div>
+    </uib-accordion-group>
+   
+    <uib-accordion-group is-open="status.open">
+      <uib-accordion-heading>
+        I can have markup, too! 
+        <button class="btn btn-small "><span class="glyphicon glyphicon-bell"></span></button>
+        <button class=""></button>
+        <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+
+        <i class="pull-right glyphicon glyphicon-pencil"></i>
+        <i class="pull-right sglyphicon glyphicon-eye-open"></i>
+      </uib-accordion-heading>
+      This is just some content to illustrate fancy headings.
+    </uib-accordion-group>
+  </uib-accordion>
+
+<label>Referencias:</label>
+<br>
+ <uib-accordion>
+    <uib-accordion-group>
+      <uib-accordion-heading>
+       Agregar Referencia
+      </uib-accordion-heading>
+    </uib-accordion-group>
+  </uib-accordion>
+
+<!--Generar temario-->
+<div class="col-lg-12">
+  <button class="btn btn-info pull-right">Generar Temario</button>
+</div>
+</div>
