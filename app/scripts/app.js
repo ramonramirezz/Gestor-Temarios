@@ -16,7 +16,8 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngLodash'
+    'ngLodash',
+    'ui.bootstrap'
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -35,6 +36,16 @@ angular
       .when('/Carrera', {
         templateUrl: 'views/carrera.html',
         controller: 'CarreraCtrl as vm'
+      })
+      .when('/temarios', {
+        templateUrl: 'views/temarios.html',
+        controller: 'TemariosCtrl as vm'
+        
+      })
+      .when('/pruebasTemarios', {
+        templateUrl: 'views/pruebastemarios.html',
+        controller: 'PruebastemariosCtrl as vm',
+        
       })
       .otherwise({
         redirectTo: '/Carrera'
