@@ -40,12 +40,20 @@ angular
       .when('/temarios', {
         templateUrl: 'views/temarios.html',
         controller: 'TemariosCtrl as vm'
-        
+
       })
       .when('/pruebasTemarios', {
         templateUrl: 'views/pruebastemarios.html',
         controller: 'PruebastemariosCtrl as vm',
-        
+
+      })
+      .when('/CrearUniversidad', {
+        templateUrl: 'views/crearuniversidad.html',
+        controller: 'CrearuniversidadCtrl'
+      })
+      .when('/universidades', {
+        templateUrl: 'views/universidades.html',
+        controller: 'UniversidadesCtrl as vm'
       })
       .otherwise({
         redirectTo: '/Carrera'

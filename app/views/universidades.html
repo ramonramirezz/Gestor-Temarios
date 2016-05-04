@@ -1,0 +1,20 @@
+<h3 class="titles">Universidades</h3>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Universidad</th>
+      <th>Ciudad</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="uni in vm.universitys">
+      <td>{{uni.name_university}}</td>
+      <td>{{uni.city}}</td>
+      <td><button type="submit" class="btn btn-primary">Ver</button></td>
+    </tr>
+
+  </tbody>
+</table>
