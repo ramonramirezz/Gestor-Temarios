@@ -47,6 +47,10 @@ angular
         controller: 'PruebastemariosCtrl as vm',
         
       })
+      .when('/CrearUniversidad', {
+        templateUrl: 'views/crearuniversidad.html',
+        controller: 'CrearuniversidadCtrl'
+      })
       .otherwise({
         redirectTo: '/Carrera'
       });
