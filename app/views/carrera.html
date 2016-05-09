@@ -1,24 +1,19 @@
-<div class="container">
-  <h2>Carreras</h2>
-  <p>Se pueden ver todas las carreras y crearlas</p>
-  <div class="form-group">
-    <input type="text" ng-model="vm.carrera.name">
-    <button class="btn btn-primary" ng-click="vm.crearCarrera()">Crear Carrera</button>
-  </div>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Nombre carrera</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="carrera in vm.carreras">
-        <td>{{carrera.id}}</td>
-        <td>{{carrera.name}}</td>
-        <td><a class="btn btn-primary" ng-href="#/Materia/{{carrera.id}}" ng-click="vm.toRoot(carrera.name)">Ver Carrera</a></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<h3 class="titles">Carreras</h3>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Carrera</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="career in vm.careers">
+      <td>#</td>
+      <td>{{career.name}}</td>
+      <td><button type="submit" class="btn btn-primary">Ver</button></td>
+    </tr>
+
+  </tbody>
+</table>
