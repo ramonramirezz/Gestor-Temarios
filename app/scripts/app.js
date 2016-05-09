@@ -55,6 +55,10 @@ angular
         templateUrl: 'views/universidades.html',
         controller: 'UniversidadesCtrl as vm'
       })
+      .when('/crearCarrera', {
+        templateUrl: 'views/crearcarrera.html',
+        controller: 'CrearcarreraCtrl as vm'
+      })
       .otherwise({
         redirectTo: '/Carrera'
       });

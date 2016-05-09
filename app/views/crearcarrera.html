@@ -1,0 +1,32 @@
+<h3 class="titles">Crear Carrera</h3>
+
+<form>
+  <fieldset class="form-group">
+    <label >Nombre Carrera</label>
+    <input type="text" class="form-control" placeholder="Nombre de carrera" ng-model="vm.carrera.name">
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="exampleInputFile">Logo de carrera</label>
+    <input type="file" class="form-control-file" id="exampleInputFile" ng-model="uriLogo">
+    <small class="text-muted">Archivo máximo de 5 MB</small>
+  </fieldset>
+
+  <button type="submit" class="btn btn-primary" ng-click="vm.crearCarrera()">Crear</button>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre carrera</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="carrera in vm.carreras">
+        <td>{{carrera.id}}</td>
+        <td>{{carrera.name}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+</form>
