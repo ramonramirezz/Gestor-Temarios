@@ -1,0 +1,79 @@
+<h3 class="titles">Crear Materia</h3>
+
+<form>
+  <fieldset class="form-group">
+    <label >Codigo</label>
+    <input type="text" class="form-control" placeholder="Codigo" ng-model="vm.subject.code">
+  </fieldset>
+  <fieldset class="form-group">
+    <label >Nombre Materia</label>
+    <input type="text" class="form-control" placeholder="Nombre de Materia" ng-model="vm.subject.name">
+  </fieldset>
+  <fieldset class="form-group">
+    <label >Horas de teoria</label>
+    <input type="text" class="form-control" placeholder="Horas de teoria" ng-model="vm.subject.hrTeo">
+  </fieldset>
+  <fieldset class="form-group">
+    <label >Horas de practica</label>
+    <input type="text" class="form-control" placeholder="Horas de practica" ng-model="vm.subject.hrPra">
+  </fieldset>
+  <fieldset class="form-group">
+    <label >Horas de workshop</label>
+    <input type="text" class="form-control" placeholder="Horas de workshop" ng-model="vm.subject.hrWork">
+  </fieldset>
+  <fieldset class="form-group">
+    <label >Creditos</label>
+    <input type="text" class="form-control" placeholder="Creditos" ng-model="vm.subject.credits">
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="exampleTextarea">Objetivo</label>
+    <textarea class="form-control" id="exampleTextarea" rows="3" ng-model="vm.subject.objective"></textarea>
+  </fieldset>
+  <fieldset class="form-group">
+    <label >Tipo</label>
+    <input type="text" class="form-control" placeholder="Tipo" ng-model="vm.subject.type">
+  </fieldset>
+  <fieldset class="form-group">
+    <label >Axis</label>
+    <input type="text" class="form-control" placeholder="Axis" ng-model="vm.subject.axis">
+  </fieldset>
+  <fieldset class="form-group">
+    <label >Creditos reuqeridos</label>
+    <input type="text" class="form-control" placeholder="Creditos requeridos" ng-model="vm.subject.creditReq">
+  </fieldset>
+
+  <button type="submit" class="btn btn-primary" ng-click="vm.createSubject()">Crear</button>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre Materia</th>
+        <th>Horas Teoria</th>
+        <th>Horas Practicas</th>
+        <th>Horas Workshop</th>
+        <th>Creditos</th>
+        <!-- <th>Objetivo</th> -->
+        <th>Tipo</th>
+        <th>Axis</th>
+        <th>Creditos requeridos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="subject in vm.subjects">
+        <td>{{subject.code}}</td>
+        <td>{{subject.name}}</td>
+        <td>{{subject.hrTeo}}</td>
+        <td>{{subject.hrPra}}</td>
+        <td>{{subject.hrWork}}</td>
+        <td>{{subject.credits}}</td>
+        <!-- <td>{{subject.objective}}</td> -->
+        <td>{{subject.type}}</td>
+        <td>{{subject.axis}}</td>
+        <td>{{subject.creditReq}}</td>
+        <!-- <td>{{subject.type}}</td> -->
+      </tr>
+    </tbody>
+  </table>
+
+</form>

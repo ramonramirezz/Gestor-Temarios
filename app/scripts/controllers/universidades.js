@@ -1,8 +1,8 @@
 /**
  * @ngdoc function
- * @name gestorTemariosApp.controller:CarreraCtrl
+ * @name gestorTemariosApp.controller:UniversidadesCtrl
  * @description
- * # CarreraCtrl
+ * # UniversidadesCtrl
  * Controller of the gestorTemariosApp
  */
 
@@ -11,18 +11,18 @@
 
     angular
         .module('gestorTemariosApp')
-        .controller('UniversidadesCtrl', CarreraCtrl);
+        .controller('UniversidadesCtrl', UniversidadesCtrl);
 
-    CarreraCtrl.$inject = ['service','$rootScope'];
+    UniversidadesCtrl.$inject = ['service','$rootScope'];
 
     /* @ngInject */
-    function CarreraCtrl(service, $rootScope,lodash) {
+    function UniversidadesCtrl(service, $rootScope,lodash) {
         var vm = this;
         vm.title = 'UniversidadesCtrl';
 
-        vm.universitys  = [{"name_university":"UNISON","city":"Hermosillo"},
-                           {"name_university":"UTH","city":"Hermosillo"},
-                           {"name_university":"UES","city":"Hermosillo"}
+        vm.universitys  = [{"id":"1","name_university":"UNISON","city":"Hermosillo"},
+                           {"id":"2","name_university":"UTH","city":"Hermosillo"},
+                           {"id":"3","name_university":"UES","city":"Hermosillo"}
                           ];
 
     }
