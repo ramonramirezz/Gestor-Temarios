@@ -1,21 +1,27 @@
 <div class="container">
-  <h2>{{vm.title}}</h2>
-  <p>Se pueden asignar materias a la carrera</p>
-  <div class="form-group">
+  <h2>Materias</h2>
+  <p>Se pueden asignar materias a la carrera <a ng-href="#/crearMateria" >crear materia</a></p>
+
+  <!-- <div class="form-group">
     <input type="text" ng-model="vm.materia.name">
     <button class="btn btn-primary" ng-click="vm.crearMateria()">Crear Materia</button>
-  </div>
+  </div> -->
   <table class="table">
     <thead>
       <tr>
-        <th>ID</th>
+        <th>Codigo</th>
         <th>Nombre Materia</th>
+        <th>Creditos</th>
+        <th>Temario</th>
       </tr>
     </thead>
     <tbody>
       <tr ng-repeat="materia in vm.clases">
-        <td>{{materia.id}}</td>
-        <td>{{materia.name}}</td>
+        <td>{{materia.code_subject}}</td>
+        <td>{{materia.name_subject}}</td>
+        <td>{{materia.credits}}</td>
+        <td><a type="submit" class="btn btn-primary" >Ver</a></td>
+
       </tr>
     </tbody>
   </table>

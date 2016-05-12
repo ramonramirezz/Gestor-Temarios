@@ -10,9 +10,9 @@
   </thead>
   <tbody>
     <tr ng-repeat="career in vm.careers">
-      <td>#</td>
+      <td>{{career.id}}</td>
       <td>{{career.name}}</td>
-      <td><button type="submit" class="btn btn-primary">Ver</button></td>
+      <td><a type="submit" class="btn btn-primary" ng-href="#/Materia/{{career.id}}">Ver</a></td>
     </tr>
 
   </tbody>

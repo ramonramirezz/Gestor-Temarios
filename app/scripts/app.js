@@ -33,7 +33,7 @@ angular
         templateUrl: 'views/materia.html',
         controller: 'MateriaCtrl as vm'
       })
-      .when('/Carrera', {
+      .when('/Carrer:id', {
         templateUrl: 'views/carrera.html',
         controller: 'CarreraCtrl as vm'
       })
@@ -58,6 +58,10 @@ angular
       .when('/crearCarrera', {
         templateUrl: 'views/crearcarrera.html',
         controller: 'CrearcarreraCtrl as vm'
+      })
+      .when('/crearMateria', {
+        templateUrl: 'views/crearmateria.html',
+        controller: 'CrearmateriaCtrl as vm'
       })
       .otherwise({
         redirectTo: '/Carrera'

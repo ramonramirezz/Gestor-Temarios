@@ -19,7 +19,7 @@
     function CarreraCtrl(service, $rootScope,lodash) {
         var vm = this;
         vm.title = 'CarreraCtrl';
-        vm.careers  = [{"name":"DEV 1"},{"name":"DEV 2"},{"name":"DEV 3"}];
+        vm.careers  = [{"id":"1","name":"DEV 1"},{"id":"2","name":"DEV 2"},{"id":"3","name":"DEV 3"}];
         //
         // vm.getCourses = getCourses;
         // vm.crearCarrera = crearCarrera;
